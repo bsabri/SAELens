@@ -112,7 +112,7 @@ def load_model(
 ) -> HookedRootModule:
     
     if model_class_name == "HookedTransformer":
-        home_path = "/home/sboughorbel/Projects/NeuroX/code/models/"
+        home_path = "/export/home/sboughorbel/codes/tinystories/"
         checkpoint = torch.load(home_path + model_name +"/pytorch_model.bin", map_location=device)
         model = HookedTransformer(cfg)
         model.to(device)
