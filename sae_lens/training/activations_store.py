@@ -10,6 +10,7 @@ from datasets import (
     IterableDataset,
     IterableDatasetDict,
     load_dataset,
+    load_from_disk,
 )
 from torch.utils.data import DataLoader
 from transformer_lens.hook_points import HookedRootModule
@@ -93,7 +94,7 @@ class ActivationsStore:
             model_kwargs = {}
         self.model_kwargs = model_kwargs
         self.dataset = (
-            load_dataset(dataset, split="train", streaming=True)
+            load_from_disk(dataset)
             if isinstance(dataset, str)
             else dataset
         )
