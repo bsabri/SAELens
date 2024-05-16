@@ -7,7 +7,7 @@ from transformer_lens.hook_points import HookedRootModule
 from transformers import AutoTokenizer
 
 n_heads = 16
-n_layers = 1
+n_layers = 2
 d_model = 1024
 
 cfg = HookedTransformerConfig(
@@ -19,7 +19,7 @@ cfg = HookedTransformerConfig(
     n_heads=n_heads,
     n_key_value_heads = 16,
     d_mlp=4096,
-    d_vocab=32000,
+    d_vocab=31997,
     n_ctx=1024,
     act_fn="silu",
     normalization_type="RMS",
