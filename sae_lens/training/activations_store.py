@@ -11,6 +11,7 @@ from datasets import (
     IterableDataset,
     IterableDatasetDict,
     load_dataset,
+    load_from_disk,
 )
 from safetensors import safe_open
 from safetensors.torch import load_file, save_file

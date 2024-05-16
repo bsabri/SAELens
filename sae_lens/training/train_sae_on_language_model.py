@@ -809,6 +809,7 @@ def _save_checkpoint(
         if sae.normalize_sae_decoder:
             sae.set_decoder_norm_to_unit_norm()
         sae.save_model(path)
+        sae.save_model_legacy(path + ".pt") 
         log_feature_sparsities = {"sparsity": ctx.log_feature_sparsity}
 
         log_feature_sparsity_path = f"{path}/{SPARSITY_PATH}"
